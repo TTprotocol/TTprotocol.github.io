@@ -16,6 +16,8 @@
 	"scripts": {
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d build",
+		"push-main": "git add . && git commit -m 'Update main' && git push origin main",
+		"deploy-all": "npm run push-main && npm run deploy",
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
