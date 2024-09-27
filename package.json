@@ -23,6 +23,12 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},
+	"_comment": {
+		"predeploy": "애플리케이션을 빌드합니다.",
+		"deploy": "빌드된 파일을 gh-pages 브랜치에 푸쉬합니다.",
+		"push-main": "소스 코드를 main 브랜치에 푸쉬합니다.",
+		"deploy-all": "소스 코드와 빌드 파일을 각각의 브랜치에 푸쉬합니다."
+	},
 	"eslintConfig": {
 		"extends": [
 			"react-app",
