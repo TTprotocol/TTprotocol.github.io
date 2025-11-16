@@ -41,8 +41,8 @@ export default function Footer() {
 						transition={{ delay: 0.2 }}
 						className="text-center md:text-left"
 					>
-						<p className="text-muted-foreground flex items-center gap-2">
-							함께 해결책을 찾아가고 싶은 개발자, 박준영.
+						<div className="text-muted-foreground flex items-center gap-2">
+							<p>함께 해결책을 찾아가고 싶은 개발자, 박준영.</p>
 							<span className="text-xs">Made with</span>
 							<motion.div
 								animate={{ scale: [1, 1.2, 1] }}
@@ -57,7 +57,7 @@ export default function Footer() {
 							>
 								<Coffee className="w-4 h-4 text-amber-600" />
 							</motion.div>
-						</p>
+						</div>
 					</motion.div>
 					<motion.div
 						initial={{ opacity: 0, x: 20 }}
@@ -70,19 +70,19 @@ export default function Footer() {
 								{
 									icon: Mail,
 									href: "mailto:wnsdud7941@gmail.com",
-									label: "이메일",
+									label: "email",
 									color: "hover:text-red-500",
 								},
 								{
 									icon: SiGithub,
-									href: "https://github.com",
+									href: "#m",
 									label: "Github",
 									color: "hover:text-gray-700",
 								},
 								{
 									icon: SiVelog,
-									href: "mailto:wnsdud7941@gmail.com",
-									label: "이메일",
+									href: "#",
+									label: "velog",
 									color: "hover:text-red-500",
 								},
 							] as SocialLink[]
@@ -90,8 +90,11 @@ export default function Footer() {
 							<motion.div
 								key={social.label}
 								initial={{ opacity: 0, y: 20 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								transition={{ delay: 0.4 + index * 0.1 }}
+								whileInView={{
+									opacity: 1,
+									y: 0,
+									transition: { delay: 0.4 + index * 0.1 },
+								}}
 								whileHover={{ scale: 1.2, rotate: 10 }}
 								whileTap={{ scale: 0.9 }}
 							>
